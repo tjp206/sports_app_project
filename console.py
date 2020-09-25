@@ -7,7 +7,9 @@ import repositories.results_repo as results_repo
 import repositories.teams_repo as teams_repo
 
 
-
+game_1 = Game("Super Bowl")
+print('Super Bowl')
+games_repo.save(game_1)
 
 
 
