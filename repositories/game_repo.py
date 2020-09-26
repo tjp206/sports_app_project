@@ -7,3 +7,14 @@ def save(game):
     results = run_sql(sql, values)
     id = results[0]['id']
     game.id = id
+
+def select_all():
+    games = []
+
+    sql = "SELECT * FROM games"
+    results = run_sql(sql)
+    for row in results:
+        game = Game(row['name'], row['id'])
+        games.append(game)
+        print(games)
+    return games

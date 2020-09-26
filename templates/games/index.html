@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Games</h2>
+
+{% for game in games %}
+
+<section>
+    <p>{{ game.name }}</p>
+    <a href="/games/{{ game.id }}/edit">Edit</a>
+    <form action="/games/{{ game.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+    <a href="/games/{{ game.id }}">Book tickets</a>
+</section>
+
+{% endfor %}
+{% endblock %}
