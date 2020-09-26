@@ -6,5 +6,5 @@ games_blueprint = Blueprint("games", __name__)
 
 @games_blueprint.route("/games")
 def games():
-    games = game_repo.select_all()
+    print('games')
     return render_template("games/index.html", games=games)
