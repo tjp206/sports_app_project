@@ -4,3 +4,4 @@ class Team:
         self.coach = coach
         self.wins = []
         self.losses = []
+        self.id = id
