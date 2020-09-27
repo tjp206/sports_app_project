@@ -1,4 +1,6 @@
 class Result:
-    def __init__(self, result, id = None):
-        self.result = result
+    def __init__(self, scores, team, game, id = None):
+        self.scores = scores
+        self.team = team
+        self.game = game
         self.id = id

@@ -7,12 +7,11 @@
 {% for game in games %}
 
 <section>
-    <p>{{ game.name }}</p>
+    <p> {{ game.name }}</p>
     <a href="/games/{{ game.id }}/edit">Edit</a>
     <form action="/games/{{ game.id }}/delete" method="POST">
         <input type="submit" value="Delete">
     </form>
-    <a href="/games/{{ game.id }}">Book tickets</a>
 </section>
 
 {% endfor %}

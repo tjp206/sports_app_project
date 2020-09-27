@@ -18,3 +18,24 @@ def select_all():
         games.append(game)
         print(games)
     return games
+
+def select(id):
+    sql = "SELECT * FROM games WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    game = Game(result["name"], result["id"])
+    return game
+
+def delete_all():
+    sql = "DELETE FROM games"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM games WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def update(game):
+    sql = "UPDATE games SET name = %s WHERE id = %s"
+    values = [game.name, game.id]
+    run_sql(sql, values)

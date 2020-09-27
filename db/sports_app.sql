@@ -18,6 +18,6 @@ CREATE TABLE games (
 CREATE TABLE results (
     ID SERIAL PRIMARY KEY,
     scores INT,
-    team_id SERIAL REFERENCES teams(id),
-    game_id SERIAL REFERENCES games(id)
+    team_id INT REFERENCES teams(id) ON DELETE CASCADE,
+    game_id INT REFERENCES games(id) ON DELETE CASCADE
 );
