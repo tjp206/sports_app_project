@@ -46,5 +46,30 @@ body > header > h3 {
 
 .form-colour {
     text-shadow: 2px 2px whitesmoke;
+    font-size: 2em;
+}
+
+body > footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    color: black;
+    text-shadow: 1px 1px whitesmoke;
     font-size: 1.5em;
 }
+
+.button {
+    background-color: whitesmoke;
+    color: black;
+    /* float: left; */
+    font-size: .75em;
+    padding: 5px 5px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+  
+  .button:hover {
+    background-color: slategrey;
+    color: whitesmoke;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }

@@ -8,9 +8,9 @@
 <section class="form-colour">
     <p> Match Type: {{ game.name }}</p>
     <p> Score: <b>Seattle Seahawks, 25</b> vs New England Patriots, 20</p>
-    <a href="/games/{{ game.id }}/edit"><button>Edit</button></a>
+    <a href="/games/{{ game.id }}/edit"><button class="button">Edit</button></a>
     <form action="/games/{{ game.id }}/delete" method="POST">
-        <input type="submit" value="Delete">
+        <input type="submit" value="Delete" class="button">
     </form>
 </section>
 
