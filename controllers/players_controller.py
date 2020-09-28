@@ -13,7 +13,8 @@ def players():
 
 @players_blueprint.route("/players/new")
 def new_player():
-    return render_template("/players/new.html")
+    teams = team_repo.select_all()
+    return render_template("/players/new.html", teams=teams)
 
 @players_blueprint.route("/players", methods=["POST"])
 def create_player():
