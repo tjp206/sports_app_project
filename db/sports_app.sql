@@ -19,7 +19,8 @@ CREATE TABLE games (
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    position VARCHAR(255)
+    position VARCHAR(255),
+    rating INT
 );
 
 CREATE TABLE results (
