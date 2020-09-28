@@ -8,7 +8,7 @@ Clone the app & run it app in your command line:
 Homepage:
 - Has a shortcut to return to homepage via the "home" link(works from any page)
 - Access the Teams, Games & Players lists & options from here.
-
+https://github.com/tjp206/tjp206-week_05_sports_app_project-/blob/master/static/images/readme_images/homepage.png
 
 
 Teams:
