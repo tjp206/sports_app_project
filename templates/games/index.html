@@ -7,6 +7,7 @@
 
 <section class="form-colour">
     <p> Match Type: {{ game.name }}</p>
+    <p style="font-size: .6em;">Please note: Winning teams are shown in bold.</p>
     <p> Score: <b>Seattle Seahawks, 25</b> vs New England Patriots, 20</p>
     <a href="/games/{{ game.id }}/edit"><button class="button">Edit</button></a>
     <form action="/games/{{ game.id }}/delete" method="POST">
