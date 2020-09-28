@@ -1,6 +1,6 @@
 from db.run_sql import run_sql
 from models.team import Team
-from models.game import Game
+
 
 def save(team):
     sql = "INSERT INTO teams (name, coach, wins, losses) VALUES (%s, %s, %s, %s) RETURNING id"
@@ -9,15 +9,21 @@ def save(team):
     id = results[0]['id']
     team.id = id
 
+def select_all():
+    teams = []
 
-def outcome(team):
-    games = []
-
-    sql = "SELECT games.* FROM games INNER JOIN results ON results.game_id = games.id WHERE team_id = %s"
-    values = [team.id]
-    results = run_sql(sql, values)
-
+    sql = "SELECT * FROM teams"
+    results = run_sql(sql)
     for row in results:
-        game = Game(row['name'], row['id'])
-        games.append(game)
-    return games
+        team = Team(row['name'], row['coach'],row['wins'], row['losses'], row['id'])
+        teams.append(team)
+        print(teams)
+    return teams
+
+def select(id):
+    sql = "SELECT * FROM teams WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    team = Team(result["name"], result['coach'], result['wins'], result['losses'], result["id"])
+    return team
+

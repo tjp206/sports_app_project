@@ -20,20 +20,20 @@ game_2 = Game("Super Bowl")
 print('Super Bowl')
 game_repo.save(game_2)
 
-team_1 = Team('Las Vegas Raiders', 'Jon Gruden', 2, 0)
-print('Las Vegas Raiders', 'Jon Gruden', 2, 0)
+team_1 = Team('New England Patriots', 'Jon Gruden', 2, 0)
+print('New England Patriots', 'Bill Belichick', 2, 0)
 team_repo.save(team_1)
 
 team_2 = Team('Seattle Seahawks', 'Pete Carroll', 2, 0)
 print('Seattle Seahawks', 'Pete Carroll', 2, 0)
 team_repo.save(team_2)
 
-player_1 = Player('Russell Wilson', 'QB', 99)
+player_1 = Player('Russell Wilson', 'QB', 99, team_2)
 print('Russell Wilson', 'QB', 99)
 player_repo.save(player_1)
 
-player_2 = Player('Tom Brady', 'QB', 95)
-print('Tom Brady', 'QB', 95)
+player_2 = Player('Cam Newton', 'QB', 95, team_1)
+print('Cam Newton', 'QB', 95)
 player_repo.save(player_2)
 
 

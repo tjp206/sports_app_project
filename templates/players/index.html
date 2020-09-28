@@ -9,8 +9,9 @@
     <p> {{ player.name }}</p>
     <p> {{ player.position }} </p>
     <p> {{ player.rating }} </p>
+    <p> {{ player.team.name }} </p>
     <a href="/players/{{ player.id }}/edit">Edit</a>
-    <form action="/players/{{ players.id }}/delete" method="POST">
+    <form action="/players/{{ player.id }}/delete" method="POST">
         <input type="submit" value="Delete">
     </form>
 </section>
