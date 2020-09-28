@@ -27,3 +27,16 @@ def select(id):
     team = Team(result["name"], result['coach'], result['wins'], result['losses'], result["id"])
     return team
 
+def delete_all():
+    sql = "DELETE FROM teams"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM teams WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def update(team):
+    sql = "UPDATE teams SET (name, coach, wins, losses) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [team.name, team.coach, team.wins, team.losses, team.id]
+    run_sql(sql, values)
