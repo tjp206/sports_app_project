@@ -5,12 +5,12 @@ import repositories.game_repo as game_repo
 from models.team import Team
 import repositories.team_repo as team_repo
 
-from models.result import Result
-import repositories.result_repo as result_repo
+from models.player import Player
+import repositories.player_repo as player_repo
 
 # game_repo.delete_all()
+# player_repo.delete_all()
 # team_repo.delete_all()
-# result_repo.delete_all()
 
 game_1 = Game("Exhibition")
 print('Exhibiton')
@@ -28,11 +28,13 @@ team_2 = Team('Seattle Seahawks', 'Pete Carroll', 2, 0)
 print('Seattle Seahawks', 'Pete Carroll', 2, 0)
 team_repo.save(team_2)
 
-result_1 = Result(45, team_1, team_2, game_1)
-result_repo.save(result_1)
-print(result_1.__dict__)
-game_team = team_repo.outcome(team_1)
-print(game_team)
+player_1 = Player('Russell Wilson', 'QB', 99)
+print('Russell Wilson', 'QB', 99)
+player_repo.save(player_1)
+
+player_2 = Player('Tom Brady', 'QB', 95)
+print('Tom Brady', 'QB', 95)
+player_repo.save(player_2)
 
 
 

@@ -2,9 +2,6 @@ from flask import Blueprint, Flask, render_template, request, redirect
 from models.game import Game
 import repositories.game_repo as game_repo
 
-from models.team import Team
-import repositories.team_repo as team_repo
-
 games_blueprint = Blueprint("games", __name__)
 
 @games_blueprint.route("/games")

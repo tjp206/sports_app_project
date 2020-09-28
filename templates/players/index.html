@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Players</h2>
+
+{% for player in players %}
+
+<section>
+    <p> {{ player.name }}</p>
+    <p> {{ player.position }} </p>
+    <p> {{ player.rating }} </p>
+    <a href="/players/{{ player.id }}/edit">Edit</a>
+    <form action="/players/{{ players.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+</section>
+
+{% endfor %}
+{% endblock %}
