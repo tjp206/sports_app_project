@@ -48,6 +48,12 @@ def show(id):
     game = game_repo.select(id)
     return render_template("/games/show.html", game=game)
 
+@games_blueprint.route("/games/<id>/simulate")
+def get_winner(id):
+    game = game_repo.select(id)
+    winner = game.winner(game.home_team, game.away_team)
+    return render_template("/games/simulate.html", game=game, winner=winner)
+
 # @games_blueprint.route("/games/<id>/book")
 # def book_tickets(id):
 #     game = game_repo.select(id)

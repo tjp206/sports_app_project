@@ -5,6 +5,7 @@
     <p> Match Type: {{ game.name }} </p>
     <p> Home Team: {{ game.home_team.name }} </p>
     <p> Away Team: {{ game.away_team.name }} </p>
+    <a href="/games/{{ game.id }}/simulate"> <button class="button"> Simulate Game</button></a><br>
     <!-- <p style="font-size: .6em;">Please note: Winning teams are shown in bold.</p> -->
     <!-- <p> Match: <b>Seattle Seahawks, 25</b> vs New England Patriots, 20</p> -->
     <a href="/games/{{ game.id }}/edit"><button class="button">Edit</button></a>

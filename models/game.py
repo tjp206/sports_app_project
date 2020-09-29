@@ -7,7 +7,6 @@ class Game:
         self.away_team = away_team
         self.id = id
 
-
     def winner(self, home_team, away_team):
         teams = [home_team, away_team]
         shuffle(teams)
