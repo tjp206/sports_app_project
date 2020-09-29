@@ -20,17 +20,37 @@ team_2 = Team('Seattle Seahawks', 'Pete Carroll', 3, 0)
 print('Seattle Seahawks', 'Pete Carroll', 3, 0)
 team_repo.save(team_2)
 
+team_3 = Team('Dallas Cowboys', 'Mike McCarthy', 1, 2)
+print('Dallas Cowboys', 'Mike McCarthy', 1, 2)
+team_repo.save(team_3)
+
+team_4 = Team('NY Giants', 'Joe Judge', 0, 3)
+print('NY Giants', 'Joe Judge', 0, 3)
+team_repo.save(team_4)
+
 player_1 = Player('Russell Wilson', 'QB', 99, team_2)
 print('Russell Wilson', 'QB', 99)
 player_repo.save(player_1)
 
-player_2 = Player('Cam Newton', 'QB', 95, team_1)
-print('Cam Newton', 'QB', 95)
+player_2 = Player('Cam Newton', 'QB', 92, team_1)
+print('Cam Newton', 'QB', 92)
 player_repo.save(player_2)
 
-game_1 = Game('Super Bowl', team_2, team_1)
-print('Super Bowl')
+player_3 = Player('Dak Prescott', 'QB', 87, team_3)
+print('Dak Prescott', 'QB', 87)
+player_repo.save(player_3)
+
+player_4 = Player('Saquon Barkley', 'RB', 88, team_4)
+print('Saquon Barkley', 'RB', 88)
+player_repo.save(player_4)
+
+game_1 = Game('Play Off', team_3, team_4)
+print('Play Off')
 game_repo.save(game_1)
+
+game_2 = Game('Super Bowl', team_2, team_1)
+print('Super Bowl')
+game_repo.save(game_2)
 
 
 

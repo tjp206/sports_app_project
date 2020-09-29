@@ -5,7 +5,8 @@
     <p> Name: {{ player.name }}</p>
     <p> Position: {{ player.position }} </p>
     <p> Rating: {{ player.rating }} </p>
-    <p> Team: {{ player.team.name }} </p>
+    <!-- <p> Team: {{ player.team.name }} </p> -->
+    <p> Team: <a href="/teams/{{ player.team.id }}"> {{ player.team.name }} </a> </p>
     <a href="/players/{{ player.id }}/edit"><button class="button">Edit</button></a>
     <form action="/players/{{ player.id }}/delete" method="POST">
         <input type="submit" value="Delete" class="button">
