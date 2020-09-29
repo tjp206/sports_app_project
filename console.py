@@ -52,6 +52,9 @@ game_2 = Game('Super Bowl', team_2, team_1)
 print('Super Bowl')
 game_repo.save(game_2)
 
+print(game_1.winner(team_1, team_2).name)
+print(game_1.winner(team_1, team_2).name)
+print(game_1.winner(team_1, team_2).name)
 
 
 pdb.set_trace()
