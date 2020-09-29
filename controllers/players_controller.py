@@ -48,3 +48,7 @@ def delete_player(id):
     player_repo.delete(id)
     return redirect("/players")
 
+@players_blueprint.route("/players/<id>")
+def show(id):
+    player = player_repo.select(id)
+    return render_template("players/show.html", player=player)

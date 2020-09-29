@@ -6,14 +6,7 @@
 {% for player in players %}
 
 <section class="form-colour">
-    <p> Name: {{ player.name }}</p>
-    <p> Position: {{ player.position }} </p>
-    <p> Rating: {{ player.rating }} </p>
-    <p> Team: {{ player.team.name }} </p>
-    <a href="/players/{{ player.id }}/edit"><button class="button">Edit</button></a>
-    <form action="/players/{{ player.id }}/delete" method="POST">
-        <input type="submit" value="Delete" class="button">
-    </form>
+    <p><a href="players/{{ player.id }}"> {{ player.name }}</a></p>
 </section>
 
 {% endfor %}
