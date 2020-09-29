@@ -44,17 +44,24 @@ player_4 = Player('Saquon Barkley', 'RB', 88, team_4)
 print('Saquon Barkley', 'RB', 88)
 player_repo.save(player_4)
 
-game_1 = Game('Play Off', team_3, team_4)
-print('Play Off')
+game_1 = Game('Pre Season', team_1, team_3)
+print('Pre Season')
 game_repo.save(game_1)
 
-game_2 = Game('Super Bowl', team_2, team_1)
-print('Super Bowl')
+game_2 = Game('Regular Season', team_2, team_4)
+print('Regular Season')
 game_repo.save(game_2)
 
-print(game_1.winner(team_1, team_2).name)
-print(game_1.winner(team_1, team_2).name)
-print(game_1.winner(team_1, team_2).name)
+game_3 = Game('Play Off', team_3, team_4)
+print('Play Off')
+game_repo.save(game_3)
 
+game_4 = Game('Super Bowl', team_2, team_1)
+print('Super Bowl')
+game_repo.save(game_4)
+
+print(game_1.winner(team_1, team_2).name)
+print(game_1.winner(team_1, team_2).name)
+print(game_1.winner(team_1, team_2).name)
 
 pdb.set_trace()
