@@ -83,3 +83,7 @@ body > footer {
     flex-direction: column;
     align-items: center;
 }
+
+.giphy-embed{
+    border-radius: 8px;
+}
