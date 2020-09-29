@@ -62,10 +62,11 @@ body > footer {
     background-color: whitesmoke;
     color: black;
     /* float: left; */
-    font-size: .75em;
+    font-size: 1em;
     padding: 5px 5px;
     border-radius: 12px;
     transition-duration: 0.4s;
+    list-style-type: none;
 }
   
   .button:hover {
@@ -73,3 +74,12 @@ body > footer {
     color: whitesmoke;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
+
+  .base-text {
+    color: red;
+    font-size: 3em;
+    text-shadow: 2px 2px blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
