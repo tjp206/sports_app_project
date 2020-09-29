@@ -12,14 +12,6 @@ import repositories.player_repo as player_repo
 # player_repo.delete_all()
 # team_repo.delete_all()
 
-game_1 = Game("Exhibition")
-print('Exhibiton')
-game_repo.save(game_1)
-
-game_2 = Game("Super Bowl")
-print('Super Bowl')
-game_repo.save(game_2)
-
 team_1 = Team('New England Patriots', 'Bill Belichick', 2, 1)
 print('New England Patriots', 'Bill Belichick', 2, 1)
 team_repo.save(team_1)
@@ -35,6 +27,10 @@ player_repo.save(player_1)
 player_2 = Player('Cam Newton', 'QB', 95, team_1)
 print('Cam Newton', 'QB', 95)
 player_repo.save(player_2)
+
+game_1 = Game('Super Bowl', team_2, team_1)
+print('Super Bowl')
+game_repo.save(game_1)
 
 
 

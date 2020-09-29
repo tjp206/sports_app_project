@@ -51,4 +51,4 @@ def delete_player(id):
 @players_blueprint.route("/players/<id>")
 def show(id):
     player = player_repo.select(id)
-    return render_template("players/show.html", player=player)
+    return render_template("/players/show.html", player=player)

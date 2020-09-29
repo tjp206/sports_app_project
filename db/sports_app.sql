@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS players;
-DROP TABLE IF EXISTS teams;
 DROP TABLE IF EXISTS games;
+DROP TABLE IF EXISTS teams;
 
 CREATE TABLE teams (
     id SERIAL PRIMARY KEY,
@@ -18,9 +18,10 @@ CREATE TABLE players (
     team_id INT REFERENCES teams(id) ON DELETE CASCADE
 );
 
-
 CREATE TABLE games (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    home_team_id INT REFERENCES teams(id) ON DELETE CASCADE,
+    away_team_id INT REFERENCES teams(id) ON DELETE CASCADE
 );
 
