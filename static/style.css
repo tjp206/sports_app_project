@@ -9,7 +9,6 @@ body {
     align-items: center;
 }
 
-
 body > header > h1 {
     color: red;
     font-size: 3em;
@@ -50,9 +49,9 @@ body > header > h3 {
 }
 
 body > footer {
-    position: relative;
-    right: 0px;
-    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: black;
     text-shadow: 1px 1px whitesmoke;
     font-size: 1.2em;
