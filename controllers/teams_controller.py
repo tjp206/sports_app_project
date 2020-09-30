@@ -46,7 +46,8 @@ def delete_team(id):
 @teams_blueprint.route("/teams/<id>")
 def show(id):
     team = team_repo.select(id)
-    return render_template("/teams/show.html", team=team)
+    players = team_repo.select_players(team)
+    return render_template("/teams/show.html", team=team, players=players)
 
 
 

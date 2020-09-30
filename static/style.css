@@ -51,7 +51,7 @@ body > header > h3 {
 
 body > footer {
     position: relative;
-    right: -650px;
+    right: 0px;
     bottom: 0px;
     color: black;
     text-shadow: 1px 1px whitesmoke;

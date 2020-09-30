@@ -64,4 +64,6 @@ print(game_1.winner(team_1, team_2).name)
 print(game_1.winner(team_1, team_2).name)
 print(game_1.winner(team_1, team_2).name)
 
+print(team_repo.select_players(team_2))
+
 pdb.set_trace()

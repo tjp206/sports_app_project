@@ -11,4 +11,3 @@ class Game:
         teams = [home_team, away_team]
         shuffle(teams)
         return teams[0]
-

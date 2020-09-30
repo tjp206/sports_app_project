@@ -17,8 +17,6 @@ def select_all():
     sql = "SELECT * FROM teams"
     results = run_sql(sql)
     for row in results:
-        # player = player_repo.select(row["player_id"])
-        # print(player)
         team = Team(row['name'], row['coach'],row['wins'], row['losses'], row['id'])
         teams.append(team)
         print(teams)
@@ -28,9 +26,19 @@ def select(id):
     sql = "SELECT * FROM teams WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    # player = player_repo.select(result["team_id"])
     team = Team(result["name"], result['coach'], result['wins'], result['losses'], result["id"])
     return team
+
+def select_players(team):
+    players = []
+
+    sql = "SELECT * FROM players WHERE team_id = %s"
+    values = [team.id]
+    results = run_sql(sql, values)
+    for row in results:
+        player = Player(row['name'], row['position'], row['rating'], team, row['id'])
+        players.append(player)
+    return players
 
 def delete_all():
     sql = "DELETE FROM teams"
