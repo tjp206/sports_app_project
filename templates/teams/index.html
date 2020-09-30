@@ -6,7 +6,7 @@
 {% for team in teams %}
 
 <section class="form-colour">
-    <p><a href="/teams/{{ team.id }}"> {{ team.name }}</a></p>
+    <p>League Position: {{ teams.index(team) +1 }}:<a href="/teams/{{ team.id }}"> {{ team.name }}</a></p>
 </section>
 
 {% endfor %}
