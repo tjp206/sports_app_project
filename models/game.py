@@ -10,4 +10,4 @@ class Game:
     def winner(self, home_team, away_team):
         teams = [home_team, away_team]
         shuffle(teams)
-        return teams[0]
+        return teams[0] # Simulation code to return winner

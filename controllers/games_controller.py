@@ -28,13 +28,17 @@ def create_game():
 
 @games_blueprint.route("/games/<id>/edit")
 def edit_game(id):
+    teams = team_repo.select_all()
     game = game_repo.select(id)
-    return render_template('/games/edit.html', game=game)
+    return render_template('/games/edit.html', game=game, teams=teams)
 
 @games_blueprint.route("/games/<id>", methods=["POST"])
 def update_game(id):
     name = request.form["name"]
-    game = Game(name, id)
+    home_team = team_repo.select(request.form["home_team_id"])
+    away_team = team_repo.select(request.form["away_team_id"])
+    game = Game(name, home_team, away_team, id)
+    print("This is where I'm printing", game)
     game_repo.update(game)
     return redirect("/games")
 

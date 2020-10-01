@@ -5,10 +5,19 @@
 
 <form action="/games/{{ game.id }}" method="POST">
     <div>
-        <label for="name">Edit Game:</label>
-        <input type="text" id="name" name="name" value="{{ game.name }}">
-        <input type="text" id="home_team" name="home_team" value="{{ game.home_team.name }}">
-        <input type="text" id="away_team" name="away_team" value="{{ game.away_team.name }}">
+        <input type="text" id="name" name="name">
+        <select name="home_team_id" id="home_team_id">
+            <option value="">Select home team</option>
+            {% for team in teams %}
+            <option value="{{ team.id }}">{{ team.name }}</option>
+            {% endfor %}
+        </select>
+        <select name="away_team_id" id="away_team_id">
+            <option value="">Select away team</option>
+            {% for team in teams %}
+            <option value="{{ team.id }}">{{ team.name }}</option>
+            {% endfor %}
+        </select>
         <input type="submit" class="button">
     </div>
 </form>

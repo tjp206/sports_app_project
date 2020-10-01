@@ -60,10 +60,10 @@ game_4 = Game('Super Bowl', team_2, team_1)
 print('Super Bowl')
 game_repo.save(game_4)
 
-print(game_1.winner(team_1, team_2).name)
-print(game_1.winner(team_1, team_2).name)
-print(game_1.winner(team_1, team_2).name)
+# print(game_1.winner(team_1, team_2).name)
+# print(game_1.winner(team_1, team_2).name)
+# print(game_1.winner(team_1, team_2).name)
 
-print(team_repo.select_players(team_2))
+# print(team_repo.select_players(team_2))
 
 pdb.set_trace()
