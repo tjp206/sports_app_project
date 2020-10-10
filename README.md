@@ -8,7 +8,7 @@ Technology used to create the app:
 
 Welcome to Fantasy NFL App.
 
-Clone the app & run it app in your command line:
+Clone the app & run the app in your command line:
 - To get going you'll need to type the command "flask run" into your terminal & hit the return button.
 - Go to your browser & enter the URL "localhost:5000" and again press the return button.
 
